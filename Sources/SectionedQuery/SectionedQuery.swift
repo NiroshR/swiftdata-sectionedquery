@@ -149,7 +149,7 @@ public struct SectionedResults<SectionIdentifier, Result> : RandomAccessCollecti
     public typealias Element = SectionedResults<SectionIdentifier, Result>.Section
     public typealias Index = Int
     
-    private var sections: [SectionedResults<SectionIdentifier, Result>.Section<Result>]
+    public var sections: [SectionedResults<SectionIdentifier, Result>.Section<Result>]
 
     init(sections: [SectionedResults<SectionIdentifier, Result>.Section<Result>], configuration: Binding<SectionedQuery<SectionIdentifier, Result>.Configuration>, needsFetch: Binding<Bool> ) {
         self.sections = sections
@@ -169,7 +169,7 @@ public struct SectionedResults<SectionIdentifier, Result> : RandomAccessCollecti
         public typealias Element = Element
         public typealias Index = Int
 
-        private var elements: [Element]
+        public var elements: [Element]
         
         init(id: SectionIdentifier, elements: [Element]) {
             self.id = id
